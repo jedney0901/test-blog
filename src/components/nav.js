@@ -1,14 +1,15 @@
 import * as React from 'react';
+import { Link } from 'gatsby'
 
 const navItems = [
-    { id: 'home', name: 'Home' },
-    { id: 'articles', name: 'Articles' }
+    { id: 'home', name: 'Home', to: '/' },
+    // { id: 'articles', name: 'Articles', }
 ]
 const NavItem = ({ navItem }) => {
     return (
-        <div>
+        <Link to={navItem.to}>
             {navItem.name}
-        </div>
+        </Link>
     )
 }
 
